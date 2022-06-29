@@ -1,0 +1,480 @@
+
+:root {
+    --color-uno: #F7EFED;
+    --color-dos: #ACA1A1;
+    --color-tres: #69656F;
+    --color-cuatro: #293249;
+    --color-cinco: #DDD2CE;
+
+    /* --color1: #25283B;
+    --color2: #3F3B4E;
+    --color3: #201D27;
+    --color4: #604C5A;
+    --color5: #835962;
+    --color6: #Fff; */
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+
+/* ------------------------------------------Menu responsive mobile  -----------------------------------*/
+
+body{
+
+    margin-top: 80px;
+    transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+
+                                        /* ---------------------------- header --------------------------*/
+
+header{
+    width: 100%;
+    height: 80px;
+    background: var(--color-cuatro);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+}
+
+header img {
+    width: 35%;
+    margin-left: 10px;
+}
+
+.icon__menu {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(10px);
+    color: #fff;
+}
+
+.icon__menu--2 {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    transform: translateX(10px);
+}
+
+.icon__menu i{
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+}
+
+
+.icon__menu--2 i{
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+}
+
+                                        /* ------------------------fin del header----------------------- */
+
+/* ------------funciones------------- */
+
+
+/*Ocultar scroll para chrome, safari y opera*/
+.menu__side::-webkit-scrollbar{
+    display: none;
+}
+
+/*Ocultar scroll para IE, Edge y Firefox*/
+.menu__side{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* -------fin de funciones---------- */
+
+
+                                        /* ---------------------Estilos del menu------------------------- */
+
+/* -----------Estilos de barra de navegacion--------- */
+.menu__side{
+    width: 70%;
+    height: 100%;
+    background: var(--color-cuatro);
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #fff;
+    font-size: 18px;
+    z-index: 300;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-right: 10px solid var(--color-cuatro);
+    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+/* ----- Fin de estilos de barra de navegacion------ */
+
+
+/* ----Estilos de los links---- */
+.name__page{
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+.name__page i{
+    width: 20px;
+    margin-right: 20px;
+}
+
+.options__menu{
+    padding: 0px 20px;
+    position: absolute;
+    top: 80px;
+}
+
+.options__menu a{
+    color: #ffffff;
+    cursor: default;
+    display: block;
+    position: relative;
+    transition: color 300ms;
+    font-weight: 300;
+}
+
+.options__menu a:hover{
+    color: white;
+}
+
+.options__menu .option{
+    padding: 20px 0px 5px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+.contenedor__list--menu {
+    padding-bottom: 30px;
+}
+
+a.selected{
+    color: #fff;
+}
+
+.selected:before{
+    content: '';
+    width: 3px;
+    height: 80%;
+    background: rgb(255, 254, 254);
+    position: absolute;
+    top: 10%;
+    left: -20px;
+}
+
+.list__item {
+    list-style: none;
+}
+
+.list__item--click {
+    cursor: pointer;
+}
+
+.list-boton {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+}
+
+.flecha .list-flecha {
+    transform: rotate(90deg);
+}
+
+.list-flecha {
+    margin-left: auto;
+    transition: transform .3s;
+}
+
+.list__option {
+    width: 80%;
+    margin: 5px 0 0 10px;
+    border-left: 2px solid #ffffff;
+    list-style: none;
+    transition: height .4s;
+    height: 0;
+}
+
+.nav__link--inside{
+    border-radius: 6px ;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.nav__link--inside:hover{
+    background: #ffffff;
+}
+
+.list{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0 16px 16px 0;
+    background: #fff;
+}
+
+.list__item{
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.flecha .list__arrow{
+    transform: rotate(90deg);
+} 
+
+.list-name {
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 10px 0 10px 20px;
+    text-align: left;
+}
+
+/* ----fin de estilos de los links---- */
+
+
+/*Clases para usar en JavaScript*/
+
+.body_move{
+    margin-left: 250px;
+}
+
+.menu__side_move{
+    width: 250px;
+}
+
+/* -----------------------------------------Termina el menu responsive mobile---------------------------- */
+
+.contenedor-presentacion {
+    width: 100%;
+    height: 87vh;
+    background-color: var(--color-uno);
+    padding: 20px;
+    justify-items: center;
+}
+
+.contenedor-presentacion h1 {
+
+    font-size: 4rem;
+    font-weight: bold;
+    color:  var(--color-sec);
+}
+
+.contenedor-presentacion p {
+    font-size: 2rem;
+    font-weight: 300;
+    color:  var(--color-sec);
+}
+
+.contenedro-info {
+    padding-top: 70px;
+    text-align: center;
+}
+
+/* --------- segunda seccion------  */
+
+.conenedor-somos {
+    padding: 20px;
+    background-color: var(--color-cinco);
+}
+
+.somos--title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color:  var(--color-cuatro);
+}
+
+.somos--p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    color: var(--color-cuatro);
+    margin: 20px 15px 0 15px;
+}
+
+.somos--p2 {
+    margin-bottom: 50px;
+}
+
+/* ------ tercera seccion ------ */
+
+.contenedor-servicios {
+    padding: 20px;
+    background-color: var(--color-uno);
+}
+
+.servicio-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-cuatro);
+}
+
+.contenedor-servicio--responsive {
+    width: 80%;
+    min-height: 200px;
+    margin: 20px auto;
+    background-color: var(--color-tres);
+    border-radius: 2px;
+    padding: 30px;
+}
+
+.contenedor-servicio--responsive img {
+    width: 50px;
+}
+
+.responsive--title {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--color-uno);
+    margin-bottom: 20px;
+}
+
+.responsive--p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2.5rem;
+    color: var(--color-uno);
+}
+
+/* Cuarta seccion */
+
+.contenedor-portafolio {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--color-cinco);
+}
+
+.contenedor-portafolio__title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-cuatro);
+}
+
+.contenedor-portafolio--img {
+    width: 80%;
+    min-height: 230px;
+    margin: 20px auto;
+    background-color: var(--color-tres);
+    border-radius: 2px;
+    border-radius: 3px;
+}
+
+
+.contenedor-portafolio--img img{
+    width: 100%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.contenedor--info {
+    padding: 20px 0 0 20px;
+}
+
+.portafolio--title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.portafolio--p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #fff;
+    padding-bottom: 40px;
+}
+
+/* fotter  */
+
+footer {
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    background-color: var(--color-tres);
+}
+
+.title-contacto {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-uno);
+}
+
+.contenedor-contacto {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.contenedor-contacto img {
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor-contacto picture {
+    width: 30px;
+    margin: 10px;
+}
+
+.contenedor-contacto p {
+    font-size: 1.4rem;
+    color: var(--color-uno);
+}
+
+
+@media screen and (max-width: 760px){
+    .body_move{
+        margin-left: 0px;
+    }
+
+    .menu__side_move{
+        width: 80px;
+        left: -80px;
+    }
+
+
+    /* Fucion ventana */
+
+    .name__page i{
+        width: 20px;
+        margin-right: 5px;
+    }
+
+    .name__page {
+        padding: 20px 29px;
+    }
+
+    .options__menu {
+        font-size: 15px;
+    }
+}
